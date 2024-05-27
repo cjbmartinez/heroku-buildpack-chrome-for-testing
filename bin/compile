@@ -67,7 +67,7 @@ rm -f "$ZIP_LOCATION"
 
 echo "Downloading Chromedriver" | indent
 
-if [$VERSION -lt 115]; then
+if [ [[$VERSION]] -lt 115 ]; then
   echo "Downloading OLDER VERSION OF Chromedriver" | indent
   ZIP_URL="https://chromedriver.storage.googleapis.com/$VERSION/chromedriver_linux64.zip"
 else
