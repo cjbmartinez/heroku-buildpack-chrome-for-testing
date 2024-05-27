@@ -93,6 +93,6 @@ export PATH="$BUILD_DIR/.chrome-for-testing/chrome-linux64:$BUILD_DIR/.chrome-fo
 echo "exporting chromedriver linunx" | indent
 
 which chrome | indent
-which chromedriver | indent
+# which chromedriver | indent
 
 echo "Installed Chrome for Testing $CHANNEL version $VERSION" | indent
