@@ -67,8 +67,8 @@ rm -f "$ZIP_LOCATION"
 
 echo "Downloading Chromedriver" | indent
 
-echo "Downloading 114.0.5735.90 VERSION OF Chromedriver" | indent
-ZIP_URL="https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip"
+echo "Downloading 115.0.5790.98 VERSION OF Chromedriver" | indent
+ZIP_URL="https://chromedriver.storage.googleapis.com/115.0.5790.98/chromedriver_linux64.zip"
 # ZIP_URL="https://storage.googleapis.com/chrome-for-testing-public/$VERSION/linux64/chromedriver-linux64.zip"
 ZIP_LOCATION="$INSTALL_DIR/chromedriver.zip"
 curl --silent --show-error --fail --retry 3 --retry-connrefused --connect-timeout 10 -o "${ZIP_LOCATION}" "${ZIP_URL}" | indent
