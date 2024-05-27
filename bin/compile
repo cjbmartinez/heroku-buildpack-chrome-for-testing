@@ -85,9 +85,13 @@ echo "BUILD_DIR=$BUILD_DIR" | indent
 mkdir -p "$BUILD_DIR/.profile.d"
 echo "Added directory .profile.d" | indent
 echo "export PATH=\$HOME/.chrome-for-testing/chrome-linux64:\$HOME/.chrome-for-testing/chromedriver-linux64:\$PATH" >> "$BUILD_DIR/.profile.d/chrome-for-testing.sh"
+echo "exporting chrome for testing" | indent
 
 # Verify the executables are actually present
 export PATH="$BUILD_DIR/.chrome-for-testing/chrome-linux64:$BUILD_DIR/.chrome-for-testing/chromedriver-linux64:$PATH"
+
+echo "exporting chromedriver linunx" | indent
+
 which chrome | indent
 which chromedriver | indent
 
