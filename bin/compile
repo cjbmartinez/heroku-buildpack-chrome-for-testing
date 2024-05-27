@@ -72,7 +72,7 @@ ZIP_URL="https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_
 # ZIP_URL="https://storage.googleapis.com/chrome-for-testing-public/115.0.5790.98/linux64/chromedriver-linux64.zip"
 ZIP_LOCATION="$INSTALL_DIR/chromedriver.zip"
 curl --verbose --show-error --fail --retry 3 --retry-connrefused --connect-timeout 10 -o "${ZIP_LOCATION}" "${ZIP_URL}" | indent
-unzip -q -o "$ZIP_LOCATION" -d "$INSTALL_DIR" | indent
+unzip -j -o "$ZIP_LOCATION" -d "$INSTALL_DIR" | indent
 rm -f "$ZIP_LOCATION"
 
 source "$BUILDPACK_DIR/bin/install-chrome-dependencies"
