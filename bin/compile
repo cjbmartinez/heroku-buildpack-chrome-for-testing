@@ -78,7 +78,12 @@ rm -f "$ZIP_LOCATION"
 source "$BUILDPACK_DIR/bin/install-chrome-dependencies"
 
 echo "Adding executables to PATH" | indent
+echo "Done Adding executables to PATH" | indent
+echo "BUILDPACK DIR=$BUILDPACK_DIR" | indent
+echo "BUILD_DIR=$BUILD_DIR" | indent
+
 mkdir -p "$BUILD_DIR/.profile.d"
+echo "Added directory .profile.d" | indent
 echo "export PATH=\$HOME/.chrome-for-testing/chrome-linux64:\$HOME/.chrome-for-testing/chromedriver-linux64:\$PATH" >> "$BUILD_DIR/.profile.d/chrome-for-testing.sh"
 
 # Verify the executables are actually present
